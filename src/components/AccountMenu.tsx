@@ -1,6 +1,5 @@
 import { X, ChevronRight, LogOut, UserCircle } from "lucide-react";
 
-// Componente Menu de conta do usuário com acesso condicional ao Painel Administrativo para admins
 type AccountMenuProps = {
   userName: string;
   isAdmin?: boolean;
@@ -8,6 +7,7 @@ type AccountMenuProps = {
   onOpenAdmin?: () => void;
 };
 
+// Componente Menu de conta do usuário com acesso condicional ao Painel Administrativo para admins
 export default function AccountMenu({ userName, isAdmin = false, onClose, onOpenAdmin }: AccountMenuProps) {
   return (
     <div className="absolute right-0 top-full mt-2 w-[360px] bg-white rounded-2xl shadow-xl border border-neutral-100 z-50 p-6">

@@ -12,7 +12,6 @@ function formatPrice(value: number) {
   return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
-
 // Componente de Card de produto para o catálogo que exibe foto, selo, opção de favoritar e botão para ver detalhes
 export default function CatalogProductCard({
   product,
