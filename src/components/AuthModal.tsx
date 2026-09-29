@@ -8,7 +8,6 @@ type AuthModalProps = {
 
 // Componente do Modal de Autenticação alternando entre as abas de login e cadastro
 export default function AuthModal({ initialMode = "entrar", onClose }: AuthModalProps) {
-  
   const [mode, setMode] = useState<"entrar" | "cadastrar">(initialMode);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -17,8 +16,8 @@ export default function AuthModal({ initialMode = "entrar", onClose }: AuthModal
     <div
       className="fixed inset-0 bg-black/10 backdrop-blur-[1px] flex items-start justify-center pt-24 px-4 z-50"
       onClick={onClose}
-    >
-        <div
+    >      
+      <div
         onClick={(e) => e.stopPropagation()}
         className="bg-white rounded-2xl shadow-xl w-full max-w-md p-8 relative"
       >
@@ -36,7 +35,7 @@ export default function AuthModal({ initialMode = "entrar", onClose }: AuthModal
             {mode === "entrar" ? "Acesse sua conta" : "Crie sua conta"}
           </p>
         </div>
-        
+
         <div className="flex border-b border-neutral-100 mb-6">
           <button
             onClick={() => setMode("entrar")}
@@ -59,7 +58,7 @@ export default function AuthModal({ initialMode = "entrar", onClose }: AuthModal
             Cadastrar
           </button>
         </div>
-        
+
         {mode === "entrar" ? (
           <form className="flex flex-col gap-4">
             <input
@@ -79,7 +78,7 @@ export default function AuthModal({ initialMode = "entrar", onClose }: AuthModal
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400"
                 aria-label="Mostrar senha"
               >
-                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </div>
 
@@ -118,7 +117,7 @@ export default function AuthModal({ initialMode = "entrar", onClose }: AuthModal
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400"
                 aria-label="Mostrar senha"
               >
-                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </div>
 
